@@ -76,6 +76,9 @@ void Robot::TeleopInit() {
 
 void Robot::TeleopPeriodic() {
 	Scheduler::GetInstance()->Run();
+	Robot::cannon->ShootLeft();
+	Robot::cannon->ShootCenter();
+	Robot::cannon->ShootRight();
 }
 
 void Robot::TestPeriodic() {

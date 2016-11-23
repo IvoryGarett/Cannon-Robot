@@ -46,6 +46,21 @@ void Cannon::ShootCenter(){
 	}
 }
 
+void Cannon::ShootLeft(){
+	if(Robot::oi->getJoystick_L()->GetRawButton(0)==true){
+	cannon_L->Set(true);
+	}else{
+	cannon_L->Set(false);
+	}
+}
+
+void Cannon::ShootRight(){
+	if(Robot::oi->getJoystick_L()->GetRawButton(2)==true){
+	cannon_R->Set(true);
+	}else{
+	cannon_R->Set(false);
+	}
+}
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-
